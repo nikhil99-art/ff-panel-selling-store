@@ -7,7 +7,7 @@
     // =========================================================
     "admins": {
       ".read": true,
-      ".write": "auth != null && auth.token.email === 'gamingnon75@gmail.com'"
+      ".write": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com')"
     },
 
     // =========================================================
@@ -16,23 +16,23 @@
     // =========================================================
     "panels": {
       ".read": "auth != null",
-      ".write": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)"
+      ".write": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)"
     },
     "promotions": {
       ".read": "auth != null",
-      ".write": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)"
+      ".write": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)"
     },
     "settings": {
       ".read": true,
-      ".write": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)"
+      ".write": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)"
     },
     "deposit_settings": {
       ".read": true,
-      ".write": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)"
+      ".write": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)"
     },
     "support_links": {
       ".read": true,
-      ".write": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)"
+      ".write": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)"
     },
 
     // =========================================================
@@ -41,10 +41,10 @@
     // Admin has access to all users.
     // =========================================================
     "users": {
-      ".read": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)",
+      ".read": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)",
       "$uid": {
-        ".read": "auth != null && (auth.uid === $uid || auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)",
-        ".write": "auth != null && (auth.uid === $uid || auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)"
+        ".read": "auth != null && (auth.uid === $uid || (auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)",
+        ".write": "auth != null && (auth.uid === $uid || (auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)"
       }
     },
 
@@ -53,17 +53,17 @@
     // Completely isolated per user.
     // =========================================================
     "transactions": {
-      ".read": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)",
+      ".read": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)",
       "$uid": {
-        ".read": "auth != null && (auth.uid === $uid || auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)",
-        ".write": "auth != null && (auth.uid === $uid || auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)"
+        ".read": "auth != null && (auth.uid === $uid || (auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)",
+        ".write": "auth != null && (auth.uid === $uid || (auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)"
       }
     },
     "purchases": {
-      ".read": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)",
+      ".read": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)",
       "$uid": {
-        ".read": "auth != null && (auth.uid === $uid || auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)",
-        ".write": "auth != null && (auth.uid === $uid || auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)"
+        ".read": "auth != null && (auth.uid === $uid || (auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)",
+        ".write": "auth != null && (auth.uid === $uid || (auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)"
       }
     },
 
@@ -72,24 +72,24 @@
     // Users create their own orders. Admins can verify/update.
     // =========================================================
     "gateway_payments": {
-      ".read": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)",
+      ".read": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)",
       "$orderId": {
         ".read": "auth != null && (data.child('uid').val() === auth.uid || !data.exists())",
-        ".write": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true || (!data.exists() && newData.child('uid').val() === auth.uid) || (data.exists() && data.child('uid').val() === auth.uid))"
+        ".write": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true || (!data.exists() && newData.child('uid').val() === auth.uid) || (data.exists() && data.child('uid').val() === auth.uid))"
       }
     },
     "manual_deposits": {
-      ".read": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)",
+      ".read": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)",
       "$txId": {
         ".read": "auth != null && (data.child('uid').val() === auth.uid || !data.exists())",
-        ".write": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true || (!data.exists() && newData.child('uid').val() === auth.uid) || (data.exists() && data.child('uid').val() === auth.uid))"
+        ".write": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true || (!data.exists() && newData.child('uid').val() === auth.uid) || (data.exists() && data.child('uid').val() === auth.uid))"
       }
     },
     "crypto_deposits": {
-      ".read": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)",
+      ".read": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)",
       "$txId": {
         ".read": "auth != null && (data.child('uid').val() === auth.uid || !data.exists())",
-        ".write": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true || (!data.exists() && newData.child('uid').val() === auth.uid) || (data.exists() && data.child('uid').val() === auth.uid))"
+        ".write": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true || (!data.exists() && newData.child('uid').val() === auth.uid) || (data.exists() && data.child('uid').val() === auth.uid))"
       }
     },
 
@@ -100,7 +100,7 @@
     // =========================================================
     "coupons": {
       ".read": "auth != null",
-      ".write": "auth != null && (auth.token.email === 'gamingnon75@gmail.com' || root.child('admins').child(auth.uid).val() === true)",
+      ".write": "auth != null && ((auth.token.email === 'gamingnon75@gmail.com' || auth.token.email === 'iaspawansingh55@gmail.com') || root.child('admins').child(auth.uid).val() === true)",
       "$couponId": {
         "used": {
           ".write": "auth != null"
